@@ -1,268 +1,87 @@
-body {
-  font-family: 'Quicksand', sans-serif;
-
+/* General Styles */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Animasi muncul pada footer */
-.footer {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.footer.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-aside {
-  width: 30%; /* Bisa diubah sesuai desain */
-  min-width: 250px; /* Supaya tidak terlalu kecil */
-  max-width: 400px; /* Supaya tidak terlalu besar */
-}
-
-iframe {
+/* Navbar Styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 300px;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Biar tidak bertumpuk */
-  padding: 10px;
-}
-.container {
-  display: flex;
-  flex-wrap: wrap; /* Supaya elemen turun ke bawah jika tidak cukup */
-}
-
-main {
-  flex: 1;
-}
-
-aside {
-  flex: 0 1 30%; /* Bisa menyesuaikan */
-}
-
-h2,
-h3 {
-  color: #00a2c6;
-}
-
-footer {
-  padding: 20px;
-  color: white;
   background-color: #00a2c6;
+  padding: 10px 0;
+  z-index: 1000;
+}
 
-  text-align: center;
-  font-weight: bold;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
 }
 
 nav a {
   font-size: 18px;
-
   font-weight: 400;
   text-decoration: none;
-
   color: white;
+  padding: 10px;
 }
 
 nav a:hover {
   font-weight: bold;
 }
 
-.profile header {
-  text-align: center;
+/* Main Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 60px; /* Supaya tidak ketutupan navbar */
 }
 
-.featured-image {
-  width: 100%;
-  max-height: 350px;
-
-  object-fit: cover;
-  object-position: center;
-}
-
-.featured-image-sejarah {
-  width: 100%;
-  max-height: 500px;
-
-  object-fit: cover;
-  object-position: center;
-}
-
-.featured-image-sukaraja {
-  width: 100%;
-  max-height: 500px;
-
-  object-fit: cover;
-  object-position: center;
-}
-
-.featured-image-rekha {
-  width: 100%;
-  max-height: 340px;
-
-  object-fit: cover;
-  object-position: center;
-}
-
-.profile img {
-  width: 200px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-
-  padding: 20px;
-  margin-top: 20px;
-}
-
-.jumbotron {
-  font-size: 20px;
-  padding: 50px;
-  border-radius: 4px;
-  margin: 4px;
-  text-align: center;
-  color: white;
-  background-size: cover;
-  background-position: center;
-}
-
-nav li {
-  display: inline;
-  list-style-type: none;
-  margin-right: 20px;
-}
- 
-#content {
-  float: left;
-  width: 75%;
-}
-nav {
-  background-color: #00a2c6;
-  padding: 5px;
-}
- 
 main {
+  flex: 1;
   padding: 20px;
 }
- 
-#content {
-  float: left;
-  width: 75%;
-}
- 
-aside {
-  float: right;
-}
 
-nav {
-  background-color: #00a2c6;
-  padding: 5px;
-}
- 
-main {
+aside {
+  flex: 0 1 30%;
+  min-width: 250px;
+  max-width: 400px;
   padding: 20px;
-}
- 
-#content {
-  float: left;
-  width: 75%;
-}
- 
-nav li {
-  display: inline;
-  list-style-type: none;
-  margin-right: 20px;
-}
- 
-nav {
-  background-color: #00a2c6;
-  padding: 5px;
-}
- 
-main {
-  padding: 20px;
- 
-  overflow: auto;
-}
- 
-#content {
-  float: left;
-  width: 75%;
-}
- 
-aside {
-  float: right;
-  width: 25%;
+  background-color: #f5f5f5;
 }
 
-#content {
-  float: left;
-  width: 75%;
-}
- 
-aside {
-  float: right;
-  width: 25%;
- 
-  padding-left: 20px;
-}
-* {
-  box-sizing: border-box;
-}
- 
-body {
-  font-family: 'Quicksand', sans-serif;
-  margin: 0;
-  padding: 0;
-}
- 
-h2,
-h3 {
-  color: #00a2c6;
-}
-
-section {
-  text-align: left;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 2px;
-  text-align: left;
-  vertical-align: top;
-}
-
-th {
-  width: 130px;
-  text-align: left;
-}
-
+/* Footer Styles */
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 7%;
+  padding: 20px;
   background-color: #00a2c6;
+  color: white;
+  text-align: center;
 }
 
 .footer-text p {
   font-size: 1.6rem;
-  color: white;
 }
 
 .footer-iconTop a {
@@ -272,7 +91,7 @@ th {
   padding: .8rem;
   background: white;
   border-radius: .8rem;
-  border: .2rem solid var blue;
+  border: .2rem solid blue;
   outline: .2rem solid transparent;
   transition: .5s ease;
 }
@@ -286,39 +105,31 @@ th {
   color: #333;
 }
 
-/* Responsif untuk Mobile */
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
-  /* Mengatur aside agar tampil dalam satu kolom */
-  aside {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  /* Mengatur iframe peta agar responsif */
-  iframe {
-    width: 100%;
-    height: 300px; /* Sesuaikan tinggi agar tidak terlalu besar */
-  }
-
-  /* Footer responsif */
-  .footer {
-    display: flex;
+  nav ul {
     flex-direction: column;
     align-items: center;
+  }
+
+  nav li {
+    display: block;
+    width: 100%;
     text-align: center;
-    padding: 15px;
   }
 
-  .footer-text {
-    font-size: 14px;
+  .container {
+    flex-direction: column;
   }
 
-  .footer-iconTop {
+  aside {
+    width: 100%;
     margin-top: 10px;
   }
 
-  .footer-iconTop a {
-    font-size: 20px;
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
-
