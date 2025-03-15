@@ -256,3 +256,39 @@ th {
   font-size: 2.4rem;
   color: #333;
 }
+
+/* Responsif untuk Mobile */
+@media screen and (max-width: 768px) {
+  /* Mengatur aside agar tampil dalam satu kolom */
+  aside {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Mengatur iframe peta agar responsif */
+  iframe {
+    width: 100%;
+    height: 300px; /* Sesuaikan tinggi agar tidak terlalu besar */
+  }
+
+  /* Footer responsif */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+  }
+
+  .footer-iconTop {
+    margin-top: 10px;
+  }
+
+  .footer-iconTop a {
+    font-size: 20px;
+  }
+}
